@@ -3,6 +3,39 @@ package riders.uber.demo.UberDriver;
 import java.time.LocalDateTime;
 
 public class Driver {
+    private String firstname;
+
+    private  String lastname;
+
+    private  String email;
+
+    private String  password;
+
+    private  String licenseNumber;
+
+    private String idNumber;
+
+    private  String phoneNumber;
+
+    private String vehicleModel;
+
+    private String vehicleNumberPlate;
+
+    private  String vehicleType;
+
+
+    private Integer totalTrips;
+
+    private Boolean available = true;
+
+    private LocalDateTime createdAt = LocalDateTime.now();
+
+    private LocalDateTime updatedAt = LocalDateTime.now();
+
+
+
+
+
     public Driver(
                   String firstname,
                   String lastname,
@@ -13,21 +46,21 @@ public class Driver {
                   String phonenumber,
                   String vehiclemodel,
                   String vehiclenumberplate,
-                  String vehicletype,
+                  String vehicleType,
                   Integer totalTrips,
                   Boolean available,
                   LocalDateTime createdAt,
                   LocalDateTime updatedAt) {
         this.firstname = firstname;
         this.lastname = lastname;
-        Email = email;
+        this.email = email;
         this.password = password;
-        this.licensenumber = licensenumber;
-        this.idnumber = idnumber;
-        this.phonenumber = phonenumber;
-        this.vehiclemodel = vehiclemodel;
-        this.vehiclenumberplate = vehiclenumberplate;
-        this.vehicletype = vehicletype;
+        this.licenseNumber = licensenumber;
+        this.idNumber = idnumber;
+        this.phoneNumber = phonenumber;
+        this.vehicleModel = vehiclemodel;
+        this.vehicleNumberPlate = vehiclenumberplate;
+        this.vehicleType = vehicleType;
         this.totalTrips = totalTrips;
         this.available = available;
         this.createdAt = createdAt;
@@ -35,90 +68,106 @@ public class Driver {
     }
 
     public String getFirstname() {
+
         return firstname;
     }
 
     public void setFirstname(String firstname) {
+
         this.firstname = firstname;
     }
 
     public String getLastname() {
+
         return lastname;
     }
 
     public void setLastname(String lastname) {
+
         this.lastname = lastname;
     }
 
     public String getEmail() {
-        return Email;
+
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPassword() {
+
         return password;
     }
 
     public void setPassword(String password) {
+
         this.password = password;
     }
 
-    public String getLicensenumber() {
-        return licensenumber;
+    public String getLicenseNumber() {
+        return licenseNumber;
     }
 
-    public void setLicensenumber(String licensenumber) {
-        this.licensenumber = licensenumber;
+    public void setLicenseNumber(String licenseNumber) {
+
+        this.licenseNumber = licenseNumber;
     }
 
-    public String getIdnumber() {
-        return idnumber;
+    public String getIdNumber() {
+
+        return idNumber;
     }
 
-    public void setIdnumber(String idnumber) {
-        this.idnumber = idnumber;
+    public void setIdNumber(String idNumber) {
+
+        this.idNumber = idNumber;
     }
 
-    public String getPhonenumber() {
-        return phonenumber;
+    public String getPhoneNumber() {
+
+        return phoneNumber;
     }
 
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getVehiclemodel() {
-        return vehiclemodel;
+    public String getVehicleModel() {
+        return vehicleModel;
     }
 
-    public void setVehiclemodel(String vehiclemodel) {
-        this.vehiclemodel = vehiclemodel;
+    public void setVehicleModel(String vehicleModel) {
+
+        this.vehicleModel = vehicleModel;
     }
 
-    public String getVehiclenumberplate() {
-        return vehiclenumberplate;
+    public String getVehicleNumberPlate() {
+        return vehicleNumberPlate;
     }
 
-    public void setVehiclenumberplate(String vehiclenumberplate) {
-        this.vehiclenumberplate = vehiclenumberplate;
+    public void setVehicleNumberPlate(String vehicleNumberPlate) {
+
+        this.vehicleNumberPlate = vehicleNumberPlate;
     }
 
-    public String getVehicletype() {
-        return vehicletype;
+    public String getVehicleType() {
+        return vehicleType ;
     }
 
-    public void setVehicletype(String vehicletype) {
-        this.vehicletype = vehicletype;
+    public void setVehicleType(String vehicleType) {
+
+        this.vehicleType = vehicleType;
     }
 
     public Integer getTotalTrips() {
+
         return totalTrips;
     }
 
     public void setTotalTrips(Integer totalTrips) {
+
         this.totalTrips = totalTrips;
     }
 
@@ -127,10 +176,12 @@ public class Driver {
     }
 
     public void setAvailable(Boolean available) {
+
         this.available = available;
     }
 
     public LocalDateTime getCreatedAt() {
+
         return createdAt;
     }
 
@@ -139,6 +190,7 @@ public class Driver {
     }
 
     public LocalDateTime getUpdatedAt() {
+
         return updatedAt;
     }
 
@@ -146,36 +198,7 @@ public class Driver {
         this.updatedAt = updatedAt;
     }
 
-    private String firstname;
 
-     private  String lastname;
-
-     private  String Email;
-
-     private String  password;
-
-     private  String licensenumber;
-
-     private String   idnumber;
-
-
-
-     private  String phonenumber;
-
-     private String vehiclemodel;
-
-     private String vehiclenumberplate;
-
-     private  String vehicletype;
-
-    private Integer totalTrips;
-
-    private Boolean available = true;
-
-
-    private LocalDateTime createdAt = LocalDateTime.now();
-
-    private LocalDateTime updatedAt = LocalDateTime.now();
 
     public Driver() {
     }

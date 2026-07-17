@@ -1,26 +1,61 @@
 package riders.uber.demo.UberDriver;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/uberdrivers")
-public class DriverController  {
+public class DriverController {
 
     public DriverController(DriverService service) {
         this.service = service;
     }
 
-    private  DriverService service;
+    private DriverService service;
+
+    @PostMapping
+    public Driver save(
+            @RequestBody Driver driver) {
+        return service.SAVE(driver);
+    }
 
 
     @GetMapping
     public List<Driver> findAllDrivers() {
         return service.findAllDrivers();
+
+    }
+
+    @GetMapping("/{email}")
+    public Driver findByEmail(
+            @PathVariable String email) {
+        return service.findByEmail(email);
+    }
+
+    @GetMapping("/{phoneNumber}")
+    public Driver findByPhoneNumber(
+            @PathVariable String phoneNumber) {
+        return service.findByPhoneNumber(phoneNumber);
+    }
+
+    @PutMapping
+    public Driver update(
+            @RequestBody Driver driver)
+    {
+        return service.update(driver);
+    }
+
+    @DeleteMapping("/{email}")
+    public void delete(
+            @PathVariable String email) {
+
+        {
+            service.delete(email);
+
+
+        }
     }
 }
