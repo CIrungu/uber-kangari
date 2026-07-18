@@ -1,9 +1,7 @@
 package riders.uber.demo.UberDriver;
 
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -29,13 +27,13 @@ public class DriverController {
 
     }
 
-    @GetMapping("/{email}")
+    @GetMapping("/ email{email}")
     public Driver findByEmail(
             @PathVariable String email) {
         return service.findByEmail(email);
     }
 
-    @GetMapping("/{phoneNumber}")
+    @GetMapping("/ phone{phoneNumber}")
     public Driver findByPhoneNumber(
             @PathVariable String phoneNumber) {
         return service.findByPhoneNumber(phoneNumber);
