@@ -28,6 +28,9 @@ public class Vehicle {
         this.yearOfManufacture = yearOfManufacture;
     }
 
+
+
+
     public String getModel() {
         return model;
     }
